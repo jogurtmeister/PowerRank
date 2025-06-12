@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerRank | Home</title>
+    <link rel="stylesheet" href="challenges.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800&display=swap">
+</head>
+<body>
+<div class="xp">
+    <div class="xp-bar-info">
+        <div id="xp-bar-level">LVL 0</div>
+        <div id="xp-bar-amount">0 / 0 XP</div>
+    </div>
+    <progress id="xp-bar" value="0" max="0"></progress>
+</div>
+
+<div class="challenges">
+    <div class="section-title">Fortschritt</div>
+    <div class="card-grid">
+        <div class="card red" id="challenge-pushup"></div>
+        <div class="card cyan" id="challenge-pushup-diamond" style="display: none;"></div>
+
+        <div class="card blue" id="challenge-squats"></div>
+
+        <div class="card cyan" id="challenge-situps"></div>
+
+        <div class="card orange" id="challenge-pullup" style="display: none;"></div>
+        <div class="card difficult" id="challenge-muscleup" style="display: none;"></div>
+
+        <div class="card cyan" id="challenge-dips" style="display: none;"></div>
+
+        <div class="card gray" id="challenge-plank" style="display: none;"></div>
+
+        <div class="card green" id="challenge-jog" style="display: none;"></div>
+    </div>
+
+    <div class="section-title">Wiederholen</div>
+        <div class="card-grid">
+        </div>
+    </div>
+</div>
+
+<script src="audio.js"></script>
+<script src="xp.js"></script>
+<script src="cards.js"></script>
+<script src="unlocks.js"></script>
+</body>
+</html>

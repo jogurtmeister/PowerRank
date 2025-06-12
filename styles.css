@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+p {
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.start {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 50px;
+    background-color: #007b12;
+    color: white;
+    border: 2px solid #83ff83;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 800;
+}
