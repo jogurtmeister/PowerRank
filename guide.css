@@ -1,0 +1,38 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg-color: #1e1e1e;
+
+    --color-red: #d66;
+    --color-red-dark: #5e2626;
+    --color-orange: #e99b42;
+    --color-orange-dark: #55390f;
+    --color-yellow: #e6d66c;
+    --color-yellow-dark: #4b4a2b;
+    --color-green: #4c4;
+    --color-green-dark: #1b541b;
+    --color-cyan: #52b0ba;
+    --color-cyan-dark: #1f3e42;
+    --color-blue: #66c;
+    --color-blue-dark: #2a2b53;
+    --color-gray: #999;
+    --color-gray-dark: #444444;
+
+    --color-difficult: #f00;
+    --color-difficult-medium: #880000;
+    --color-difficult-dark: #440000;
+
+    --font: 'Open Sans';
+    --font-size-section-title: 1.5rem;
+    --font-size-card-title: 1.1rem;
+    --font-size-card-text: 0.95rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font), sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    user-select: none;
+}

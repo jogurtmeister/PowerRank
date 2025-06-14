@@ -1,19 +1,10 @@
-body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-    padding: 2rem;
-    user-select: none;
-}
-
-.xp {
+#xp {
     margin: auto;
     margin-bottom: 2rem;
     width: 80%;
 }
 
-.xp-bar-info {
+#xp-bar-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -32,13 +23,8 @@ body {
     border-radius: 3px;
 }
 
-.main-layout {
-    display: flex;
-    gap: 1rem;
-}
-
 .section-title {
-    font-size: 1.4rem;
+    font-size: var(--font-size-section-title);
     margin: 1.5rem 0 0.5rem;
     border-bottom: 1px solid #444;
     padding-bottom: 0.3rem;
@@ -51,8 +37,8 @@ body {
 }
 
 .card {
-    background-color: #1e1e1e;
-    border: 2px solid #333;
+    background-color: var(--card-bg-color);
+    border: 2px solid var(--color-gray);
     border-radius: 12px;
     padding: 1rem;
     width: 200px;
@@ -74,23 +60,57 @@ body {
     font-size: 0.95rem;
 }
 
-.red { border-color: #d66; }
-.blue { border-color: #66c; }
-.green { border-color: #4c4; }
-.orange { border-color: #e99b42; }
-.gray { border-color: #999; }
-.cyan { border-color: #52b0ba }
-.difficult { border-color: #f00; background-color: #440000; }
+.red { border-color: var(--color-red) }
+.orange { border-color: var(--color-orange) }
+.yellow { border-color: var(--color-yellow) }
+.green { border-color: var(--color-green) }
+.blue { border-color: var(--color-blue) }
+.cyan { border-color: var(--color-cyan) }
+.gray { border-color: var(--color-gray) }
+.color-difficult { border-color: var(--color-difficult); background-color: var(--color-difficult-dark); }
 
-.red:hover { background-color: #5e2626; }
-.blue:hover { background-color: #2a2b53; }
-.green:hover { background-color: #2b422b; }
-.orange:hover { background-color: #55390f; }
-.gray:hover { background-color: #444444; }
-.cyan:hover { background-color: #1f3e42 }
-.difficult:hover { background-color: #880000; }
+.red:hover { background-color: var(--color-red-dark); }
+.orange:hover { background-color: var(--color-orange-dark); }
+.yellow:hover { background-color: var(--color-yellow-dark); }
+.green:hover { background-color: var(--color-green-dark); }
+.blue:hover { background-color: var(--color-blue-dark); }
+.cyan:hover { background-color: var(--color-cyan-dark); }
+.gray:hover { background-color: var(--color-gray-dark); }
+.color-difficult:hover { background-color: var(--color-difficult-medium); }
 
-.card:active { background-color: rgba(255, 255, 255, 0.2);}
+.red:active { background-color: var(--color-red); }
+.orange:active { background-color: var(--color-orange); }
+.yellow:active { background-color: var(--color-yellow); }
+.green:active { background-color: var(--color-green); }
+.blue:active { background-color: var(--color-blue); }
+.cyan:active { background-color: var(--color-cyan); }
+.gray:active { background-color: var(--color-gray); }
+.color-difficult:active { background-color: var(--color-difficult); }
+
+.red-blue {
+    border-left-color: var(--color-red);
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-blue);
+    border-bottom-color: var(--color-blue);
+}
+.red-blue:hover {
+    background-image: linear-gradient(to right, var(--color-red-dark), var(--color-blue-dark));
+}
+.red-blue:active {
+    background-image: linear-gradient(to right, var(--color-red), var(--color-blue));
+}
+
+.color-repeat {
+    border-color: var(--color-gray);
+    background-image: linear-gradient(to bottom, var(--card-bg-color), var(--color-blue-dark));
+}
+.color-repeat:hover {
+    background-image: linear-gradient(to bottom, var(--card-bg-color), var(--color-blue));
+}
+.color-repeat:active {
+    background-image: linear-gradient(to bottom, var(--color-cyan-dark), var(--color-cyan));
+}
+
 
 @media (max-width: 750px) {
     .main-layout {
