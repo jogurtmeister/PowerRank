@@ -6,7 +6,7 @@ const xpAmount = document.getElementById("xp-bar-amount");
 const xpBar = document.getElementById("xp-bar");
 const xpLevel = document.getElementById("xp-bar-level");
 
-function updateDisplay() {
+function updateDisplayXP() {
     xpAmount.textContent = `${currentXP} / ${maxXP} XP`;
     xpBar.value = currentXP;
     xpBar.max = maxXP;
@@ -23,7 +23,7 @@ function gainXP(amount) {
         soundLevelUp.play();
     }
 
-    updateDisplay();
+    updateDisplayXP();
 }
 
-updateDisplay();
+updateDisplayXP();

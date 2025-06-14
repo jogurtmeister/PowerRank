@@ -23,6 +23,17 @@
     border-radius: 3px;
 }
 
+#kcal-burned, #kcal-burned-short {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+#kcal-burned-short {
+    display: none;
+}
+
 .section-title {
     font-size: var(--font-size-section-title);
     margin: 1.5rem 0 0.5rem;
@@ -123,5 +134,12 @@
 
     .divider {
         display: none;
+    }
+
+    #kcal-burned {
+        display: none;
+    }
+    #kcal-burned-short {
+        display: block;
     }
 }
