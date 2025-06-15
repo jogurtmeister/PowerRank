@@ -3,26 +3,9 @@ body {
     margin-top: 5%;
 }
 
-.title {
-    font-size: 48px;
-    font-weight: bold;
-}
-
 p {
     max-width: 500px;
     margin: 20px auto;
     font-size: 16px;
     line-height: 1.5;
-}
-
-.start {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 50px;
-    background-color: var(--color-green-dark);
-    color: white;
-    border: 2px solid var(--color-green);
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 800;
 }
