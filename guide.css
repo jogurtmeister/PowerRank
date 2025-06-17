@@ -18,9 +18,9 @@
     --color-gray: #999;
     --color-gray-dark: #444444;
 
-    --color-difficult: #f00;
-    --color-difficult-medium: #880000;
-    --color-difficult-dark: #440000;
+    --color-diff: #f00;
+    --color-diff-medium: #880000;
+    --color-diff-dark: #440000;
 
     --font: 'Open Sans';
     --font-size-section-title: 1.5rem;
@@ -31,10 +31,10 @@
 body {
     margin: 0;
     font-family: var(--font), sans-serif;
-    background-color: var(--bg-color);
     color: var(--text-color);
     padding: 2rem;
     user-select: none;
+    background-color: var(--bg-color);
 }
 
 .title {
@@ -47,13 +47,13 @@ button, .button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 50px;
-    background-color: var(--color-green-dark);
     color: white;
     border: 2px solid var(--color-green);
     border-radius: 25px;
     text-decoration: none;
     font-weight: 800;
     font-family: var(--font), sans-serif;
+    background-color: var(--color-green-dark);
 }
 button:active, .button:active {
     transform: scale(0.95);
