@@ -1,0 +1,32 @@
+function showPopup(head = "", body = "", duration = 3000) {
+    let container = document.querySelector(".popup");
+
+    const id = "popup-" + Math.random().toString(36);
+
+    const popup = document.createElement("div");
+    popup.id = id;
+    popup.className = "popup-card";
+
+    const headEl = document.createElement("h2");
+    headEl.className = "popup-head";
+    headEl.textContent = head;
+    if (!head.trim()) headEl.style.display = "none";
+
+    const bodyEl = document.createElement("p");
+    bodyEl.className = "popup-body";
+    bodyEl.textContent = body;
+    if (!body.trim()) bodyEl.style.display = "none";
+
+    popup.appendChild(headEl);
+    popup.appendChild(bodyEl);
+    container.appendChild(popup);
+
+    setTimeout(() => {
+        popup.style.opacity = "0";
+    }, duration - 500);
+
+    setTimeout(() => {
+        const el = document.getElementById(id);
+        el.remove();
+    }, duration);
+}

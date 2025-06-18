@@ -84,7 +84,7 @@
 .blue { border-color: var(--color-blue) }
 .cyan { border-color: var(--color-cyan) }
 .gray { border-color: var(--color-gray) }
-.color-diff { border-color: var(--color-difficult); background-color: var(--color-difficult-dark); }
+.color-diff { border-color: var(--color-diff); background-color: var(--color-diff-dark); }
 
 .red:hover { background-color: var(--color-red-dark); }
 .orange:hover { background-color: var(--color-orange-dark); }
@@ -93,7 +93,7 @@
 .blue:hover { background-color: var(--color-blue-dark); }
 .cyan:hover { background-color: var(--color-cyan-dark); }
 .gray:hover { background-color: var(--color-gray-dark); }
-.color-diff:hover { background-color: var(--color-difficult-medium); }
+.color-diff:hover { background-color: var(--color-diff-medium); }
 
 .red:active { background-color: var(--color-red); }
 .orange:active { background-color: var(--color-orange); }
@@ -102,7 +102,7 @@
 .blue:active { background-color: var(--color-blue); }
 .cyan:active { background-color: var(--color-cyan); }
 .gray:active { background-color: var(--color-gray); }
-.color-diff:active { background-color: var(--color-difficult); }
+.color-diff:active { background-color: var(--color-diff); }
 
 .red-blue {
     border-left-color: var(--color-red);
@@ -115,6 +115,19 @@
 }
 .red-blue:active {
     background-image: linear-gradient(to right, var(--color-red), var(--color-blue));
+}
+
+.red-green {
+    border-left-color: var(--color-red);
+    border-top-color: var(--color-red);
+    border-right-color: var(--color-green);
+    border-bottom-color: var(--color-green);
+}
+.red-green:hover {
+    background-image: linear-gradient(to right, var(--color-red-dark), var(--color-green-dark));
+}
+.red-green:active {
+    background-image: linear-gradient(to right, var(--color-red), var(--color-green));
 }
 
 .color-repeat {

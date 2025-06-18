@@ -238,6 +238,47 @@
             }
         ]
     },
+    "mountainclimber": {
+        "elementId": "challenge-mountainclimber",
+        "currentIndex": 0,
+        "challenges": [
+            {
+                "title": "Mountain Climbers I",
+                "desc": "15 Beinwechsler (Bergsteiger)",
+                "xp": 100,
+                "unlock": "Mountain Climbers II",
+                "kcal": 1.0
+            },
+            {
+                "title": "Mountain Climbers II",
+                "desc": "30 Beinwechsler (Bergsteiger)",
+                "xp": 200,
+                "unlock": "Mountain Climbers III",
+                "kcal": 2.0
+            },
+            {
+                "title": "Mountain Climbers III",
+                "desc": "60 Beinwechsler (Bergsteiger)",
+                "xp": 300,
+                "unlock": "Mountain Climbers IV",
+                "kcal": 4.0
+            },
+            {
+                "title": "Mountain Climbers IV",
+                "desc": "100 Beinwechsler (Bergsteiger)",
+                "xp": 500,
+                "unlock": "Mountain Climbers V",
+                "kcal": 6.0
+            },
+            {
+                "title": "Mountain Climbers V",
+                "desc": "150 Beinwechsler (Bergsteiger)",
+                "xp": 500,
+                "unlock": "Mountain Climbers VI",
+                "kcal": 10.0
+            }
+        ]
+    },
     "pullup": {
         "elementId": "challenge-pullup",
         "currentIndex": 0,

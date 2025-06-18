@@ -2,6 +2,9 @@ document.addEventListener("click", () => {
     if (currentLVL >= 2) {
         document.getElementById("challenge-jumpingjack").style.display = "block";
     }
+    if (currentLVL >= 3) {
+        document.getElementById("challenge-mountainclimber").style.display = "block";
+    }
     if (currentLVL >= 6) {
         document.getElementById("challenge-pullup").style.display = "block";
         document.getElementById("challenge-dips").style.display = "block";

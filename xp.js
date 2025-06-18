@@ -21,6 +21,7 @@ function gainXP(amount) {
         currentLVL++;
         maxXP = Math.ceil(maxXP * 1.2 / 100) * 100;
         soundLevelUp.play();
+        showPopup(`LVL ${currentLVL}`, `Nächstes Level: ${currentXP} / ${maxXP} XP`);
     }
 
     updateDisplayXP();
