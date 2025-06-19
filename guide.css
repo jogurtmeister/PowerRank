@@ -22,6 +22,9 @@
     --color-diff-medium: #880000;
     --color-diff-dark: #440000;
 
+    --color-main: var(--color-green);
+    --color-main-dark: var(--color-green-dark);
+
     --font: 'Open Sans';
     --font-size-section-title: 1.5rem;
     --font-size-card-title: 1.1rem;
@@ -60,5 +63,5 @@ button:active, .button:active {
     background-color: var(--color-green);
 }
 input {
-    accent-color: var(--color-green);
+    accent-color: var(--color-main);
 }
