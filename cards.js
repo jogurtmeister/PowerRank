@@ -20,6 +20,7 @@ function createRepeatCard(key, challenge) {
     repeatContainer.appendChild(card);
 
     document.getElementById("title-repeat").style.display = "block";
+    document.getElementById("wipe-save").style.display = "block";
 }
 
 function updateRepeatCard(key, challenge) {

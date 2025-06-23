@@ -141,6 +141,18 @@
     background-image: linear-gradient(to bottom, var(--color-cyan-dark), var(--color-cyan));
 }
 
+#wipe-save {
+    all: unset;
+    border: 2px solid var(--color-red);
+    background-color: var(--color-red-dark);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--text-color);
+}
+#wipe-save:hover {
+    background-color: var(--color-red);
+    cursor: pointer;
+}
 
 @media (max-width: 750px) {
     .main-layout {

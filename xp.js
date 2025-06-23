@@ -1,4 +1,5 @@
 let currentXP = 0;
+let totalXP = 0;
 let maxXP = 500;
 let currentLVL = 1;
 
@@ -13,18 +14,23 @@ function updateDisplayXP() {
     xpLevel.textContent = `LVL ${currentLVL}`;
 }
 
-function gainXP(amount) {
+function gainXP(amount, load = false) {
     currentXP += amount;
+    totalXP += amount;
 
     while (currentXP >= maxXP) {
         currentXP -= maxXP;
         currentLVL++;
         maxXP = Math.ceil(maxXP * 1.2 / 100) * 100;
-        soundLevelUp.play();
-        showPopup(`LVL ${currentLVL}`, `Nächstes Level: ${currentXP} / ${maxXP} XP`);
+        if (!load) {
+            soundLevelUp.play();
+            showPopup(`LVL ${currentLVL}`, `Nächstes Level: ${currentXP} / ${maxXP} XP`);
+        }
     }
 
     updateDisplayXP();
+    saveXP();
 }
 
-updateDisplayXP();
+loadXP();
+//localStorage.clear();

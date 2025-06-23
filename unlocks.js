@@ -1,4 +1,4 @@
-document.addEventListener("click", () => {
+function checkUnlocks() {
     if (currentLVL >= 2) {
         document.getElementById("challenge-jumpingjack").style.display = "block";
     }
@@ -24,4 +24,7 @@ document.addEventListener("click", () => {
     if (allChallenges.pushup.currentIndex >= 2 && allChallenges.squats.currentIndex >= 2 && allChallenges.jumpingjack.currentIndex >= 2) {
         document.getElementById("challenge-burpees").style.display = "block";
     }
-});
+}
+
+document.addEventListener("DOMContentLoaded", checkUnlocks);
+document.addEventListener("click", checkUnlocks);
