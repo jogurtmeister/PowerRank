@@ -86,6 +86,8 @@ function initChallenges() {
             } else if (challengeData.currentIndex > 1) {
                 updateRepeatCard(key, current);
             }
+
+            saveCards();
         });
     }
 }
@@ -97,4 +99,5 @@ fetch("challenges.json")
 .then((data) => {
     allChallenges = data;
     initChallenges();
+    loadCards();
 });

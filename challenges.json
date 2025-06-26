@@ -2,6 +2,7 @@
     "pushup": {
         "elementId": "challenge-pushup",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Pushup I",
@@ -43,6 +44,7 @@
     "pushupDiamond": {
         "elementId": "challenge-pushup-diamond",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Diamond Pushup I",
@@ -77,6 +79,7 @@
     "burpees": {
         "elementId": "challenge-burpees",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Burpees I",
@@ -118,6 +121,7 @@
     "squats": {
         "elementId": "challenge-squats",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Squats I",
@@ -159,6 +163,7 @@
     "situps": {
         "elementId": "challenge-situps",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Situps I",
@@ -200,6 +205,7 @@
     "plank": {
         "elementId": "challenge-plank",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Plank I",
@@ -241,6 +247,7 @@
     "mountainclimber": {
         "elementId": "challenge-mountainclimber",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Mountain Climbers I",
@@ -282,6 +289,7 @@
     "pullup": {
         "elementId": "challenge-pullup",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Pullup I",
@@ -323,6 +331,7 @@
     "muscleup": {
         "elementId": "challenge-muscleup",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Muscle Up I",
@@ -364,6 +373,7 @@
     "dips": {
         "elementId": "challenge-dips",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Dips I",
@@ -405,6 +415,7 @@
     "jumpingjack": {
         "elementId": "challenge-jumpingjack",
         "currentIndex": 0,
+        "currentRepeats": 0,
         "challenges": [
             {
                 "title": "Jumping Jack I",
