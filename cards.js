@@ -98,6 +98,6 @@ fetch("challenges.json")
 .then((response) => response.json())
 .then((data) => {
     allChallenges = data;
-    initChallenges();
     loadCards();
+    initChallenges();
 });

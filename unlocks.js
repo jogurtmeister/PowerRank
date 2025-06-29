@@ -26,5 +26,6 @@ function checkUnlocks() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", checkUnlocks);
+window.addEventListener("load", checkUnlocks);
+console.log("Unlocks checked");
 document.addEventListener("click", checkUnlocks);

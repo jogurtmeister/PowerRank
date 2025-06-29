@@ -42,11 +42,25 @@ function loadCards() {
     const progress = JSON.parse(saved);
 
     for (const key in progress) {
-        if (allChallenges[key]) {
-            allChallenges[key].currentIndex = progress[key].currentIndex || 0;
-            allChallenges[key].currentRepeats = progress[key].currentRepeats || 0;
+        const challenge = allChallenges[key];
+        if (!challenge) continue;
+
+        challenge.currentIndex = progress[key].currentIndex || 0;
+
+        const el = document.getElementById(challenge.elementId);
+        if (!el) continue;
+
+        if (challenge.currentIndex > 0) {
+            const previous = challenge.challenges[challenge.currentIndex - 1];
+
+            if (document.getElementById(`repeat-${key}`)) {
+                updateRepeatCard(key, previous);
+            } else {
+                createRepeatCard(key, previous);
+            }
         }
     }
 
     console.log("Cards Loaded");
+    console.log(JSON.parse(localStorage.getItem("powerRankCards")));
 }
