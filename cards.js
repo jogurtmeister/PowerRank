@@ -1,19 +1,22 @@
 const repeatContainer = document.getElementById("repeat-challenges");
 
 function createRepeatCard(key, challenge) {
+    if (!challenge) return;
+
     const card = document.createElement("div");
+    const setAmount = 3;
     card.className = "card color-repeat";
     card.id = `repeat-${key}`;
 
     card.innerHTML = `
         <h3>${challenge.title} Sets</h3>
-        <p>3 x ${challenge.desc}</p>
+        <p>${setAmount} x ${challenge.desc}</p>
         <p>+${challenge.xp} XP</p>
     `;
 
     card.addEventListener("click", () => {
         gainXP(challenge.xp);
-        burnKCAL(challenge.kcal * 3);
+        burnKCAL(challenge.kcal * setAmount);
         soundComplete.play();
     });
 
@@ -24,6 +27,7 @@ function createRepeatCard(key, challenge) {
 }
 
 function updateRepeatCard(key, challenge) {
+    //only up to second last rank until refresh, fix l8r
     const card = document.getElementById(`repeat-${key}`);
     if (!card) return;
 
@@ -67,6 +71,8 @@ function initChallenges() {
                 el.innerHTML = `<h3>Alle Herausforderungen abgeschlossen</h3>`;
                 el.style.opacity = "0.6";
                 el.style.pointerEvents = "none";
+                challengeData.currentIndex++;
+                saveCards();
                 return;
             }
 
@@ -98,6 +104,6 @@ fetch("challenges.json")
 .then((response) => response.json())
 .then((data) => {
     allChallenges = data;
-    loadCards();
     initChallenges();
+    loadCards();
 });

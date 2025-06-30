@@ -50,8 +50,25 @@ function loadCards() {
         const el = document.getElementById(challenge.elementId);
         if (!el) continue;
 
+        if (challenge.currentIndex >= challenge.challenges.length) {
+            el.innerHTML = `<h3>Alle Herausforderungen abgeschlossen</h3>`;
+            el.style.opacity = "0.6";
+            el.style.pointerEvents = "none";
+        } else {
+            const next = challenge.challenges[challenge.currentIndex];
+            el.innerHTML = `
+                <h3>${next.title}</h3>
+                <p>${next.desc}</p>
+                <p>+${next.xp} XP</p>
+                <p>Unlocks: ${next.unlock}</p>
+            `;
+        }
+
         if (challenge.currentIndex > 0) {
-            const previous = challenge.challenges[challenge.currentIndex - 1];
+            const index = Math.min(challenge.currentIndex - 1, challenge.challenges.length - 1);
+            const previous = challenge.challenges[index];
+
+            if (!previous) continue;
 
             if (document.getElementById(`repeat-${key}`)) {
                 updateRepeatCard(key, previous);
@@ -62,5 +79,5 @@ function loadCards() {
     }
 
     console.log("Cards Loaded");
-    console.log(JSON.parse(localStorage.getItem("powerRankCards")));
+    console.log(JSON.parse(saved));
 }
