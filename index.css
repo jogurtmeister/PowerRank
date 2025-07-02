@@ -1,18 +1,96 @@
 body {
-    text-align: center;
-    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-p {
-    max-width: 500px;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 1.5;
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--color-gray);
 }
 
 .logo {
-    width: 200px;
+    width: 250px;
     height: auto;
-    margin: auto;
     margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--color-main);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.description {
+    max-width: 450px;
+    margin: 20px auto 30px auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 12px 60px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.b-transparent {
+    background-color: transparent;
+    border-color: var(--color-gray);
+    color: var(--text-color);
+}
+
+.b-transparent:hover {
+    background-color: var(--color-gray-dark);
+    border-color: var(--color-gray);
+}
+
+.b-transparent:active {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 10px 40px;
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+    }
 }

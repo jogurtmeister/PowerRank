@@ -22,6 +22,12 @@
     border: 2px solid white;
     border-radius: 3px;
 }
+#xp-bar::-webkit-progress-value {
+    transition: width 0.3s ease-in-out;
+}
+#xp-bar::-moz-progress-bar {
+    transition: width 0.3s ease-in-out;
+}
 
 #kcal-burned, #kcal-burned-short {
     margin: auto;
@@ -32,6 +38,12 @@
 }
 #kcal-burned-short {
     display: none;
+}
+
+.challenges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-section {
@@ -51,6 +63,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    width: 100%;
 }
 
 .card {
@@ -62,6 +76,15 @@
     height: fit-content;
     transition: 0.1s ease-in-out;
     cursor: pointer;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+.hidden {
+    opacity: 0;
+    transform: scale(0.1);
+    pointer-events: none;
+    transition: all 0.4s ease;
 }
 .card:hover {
     transform: scale(1.03) rotate(1.5deg);
@@ -95,7 +118,7 @@
 .gray:hover { background-color: var(--color-gray-dark); }
 .color-diff:hover { background-color: var(--color-diff-medium); }
 
-.red:active { background-color: var(--color-red); }
+.red:active {background-color: var(--color-red); }
 .orange:active { background-color: var(--color-orange); }
 .yellow:active { background-color: var(--color-yellow); }
 .green:active { background-color: var(--color-green); }

@@ -1,31 +1,50 @@
+function doUnlock(element) {
+    const el = document.getElementById(`${element}`);
+    el.style.display = "block";
+    setTimeout(() => {
+        el.classList.remove("hidden");
+    }, 100);
+}
+
 function checkUnlocks() {
     if (currentLVL >= 2) {
-        document.getElementById("challenge-jumpingjack").style.display = "block";
+        doUnlock("challenge-jumpingjack");
     }
     if (currentLVL >= 3) {
-        document.getElementById("challenge-mountainclimber").style.display = "block";
+        doUnlock("challenge-mountainclimber");
     }
     if (currentLVL >= 6) {
-        document.getElementById("challenge-pullup").style.display = "block";
-        document.getElementById("challenge-dips").style.display = "block";
+        doUnlock("challenge-pullup");
+        doUnlock("challenge-dips");
     }
 
 
     if (allChallenges.pushup.currentIndex >= 2) {
-        document.getElementById("challenge-plank").style.display = "block";
+        doUnlock("challenge-plank");
     }
     if (allChallenges.pushup.currentIndex >= 5) {
-        document.getElementById("challenge-pushup-diamond").style.display = "block";
+        doUnlock("challenge-pushup-diamond");
     }
     if (allChallenges.pullup.currentIndex >= 5) {
-        document.getElementById("challenge-muscleup").style.display = "block";
+        doUnlock("challenge-muscleup");
     }
 
     if (allChallenges.pushup.currentIndex >= 2 && allChallenges.squats.currentIndex >= 2 && allChallenges.jumpingjack.currentIndex >= 2) {
-        document.getElementById("challenge-burpees").style.display = "block";
+        doUnlock("challenge-burpees");
     }
 }
 
-window.addEventListener("load", checkUnlocks);
+window.addEventListener("load", () => {
+    doUnlock("challenge-pushup");
+    doUnlock("challenge-squats");
+    doUnlock("challenge-situps");
+
+    const interval = setInterval(() => {
+        if (allChallenges && allChallenges.pushup) {
+            checkUnlocks();
+            clearInterval(interval);
+        }
+    }, 100);
+});
 console.log("Unlocks checked");
 document.addEventListener("click", checkUnlocks);
