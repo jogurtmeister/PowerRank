@@ -68,7 +68,12 @@ function initChallenges() {
             soundComplete.play();
 
             if (challengeData.currentIndex >= challenges.length) {
-                el.innerHTML = `<h3>Alle Herausforderungen abgeschlossen</h3>`;
+                el.innerHTML = `
+                    <div style="display: flex; gap: 10px;">
+                        <img src="svg/trophy.svg" class="trophy">
+                        <h3>Alles abgeschlossen</h3>
+                    </div>
+                `;
                 el.style.opacity = "0.6";
                 el.style.pointerEvents = "none";
                 challengeData.currentIndex++;
