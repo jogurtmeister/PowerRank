@@ -10,16 +10,24 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-    <div class="container">
-        <img src="img/logo.png" alt="Logo" class="logo">
-        <h1 class="title" style="display: none;">PowerRank</h1>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
 
-        <p class="description">Willkommen. Hier kannst du deine Fitness verbessern, indem du verschiedene Herausforderungen absolvierst. Jede Herausforderung bringt dir Erfahrungspunkte und schaltet neue Herausforderungen frei.</p>
-
-        <div class="buttons">
-            <a href="challenges.html" class="button">Start</a>
-            <a href="form/signin.html" class="button b-transparent">Einloggen</a>
-        </div>
+    <div id="home-cards" class="card-grid">
+        <a href="challenges.html" id="card-start" class="card green">
+            <h1>Start</h1>
+        </a>
+        <a href="about.html" id="card-about" class="card yellow">
+            <h1>About Us</h1>
+            <p class="description" style="display: none;">
+                Willkommen. Hier kannst du deine Fitness verbessern, indem du verschiedene Herausforderungen absolvierst.
+                Jede Herausforderung bringt dir Erfahrungspunkte und schaltet neue Herausforderungen frei.
+            </p>
+        </a>
+        <a href="form/signin.html" id="card-login" class="card red">
+            <h1>Einloggen</h1>
+        </a>
     </div>
 </body>
 </html>

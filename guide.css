@@ -29,6 +29,8 @@
     --font-size-section-title: 1.5rem;
     --font-size-card-title: 1.1rem;
     --font-size-card-text: 0.95rem;
+
+    --border-radius: 12px;
 }
 
 body {
@@ -52,11 +54,12 @@ button, .button {
     padding: 10px 50px;
     color: white;
     border: 2px solid var(--color-green);
-    border-radius: 25px;
+    border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 800;
     font-family: var(--font), sans-serif;
     background-color: var(--color-green-dark);
+    margin: auto;
 }
 button:active, .button:active {
     transform: scale(0.95);
@@ -64,4 +67,9 @@ button:active, .button:active {
 }
 input {
     accent-color: var(--color-main);
+}
+
+.wrapper {
+    margin: auto;
+    width: fit-content;
 }
