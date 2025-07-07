@@ -27,7 +27,6 @@ function createRepeatCard(key, challenge) {
 }
 
 function updateRepeatCard(key, challenge) {
-    //only up to second last rank until refresh, fix l8r
     const card = document.getElementById(`repeat-${key}`);
     if (!card) return;
 
@@ -60,12 +59,19 @@ function initChallenges() {
 
         el.addEventListener("click", () => {
             const challenges = challengeData.challenges;
+            const current = challenges[challengeData.currentIndex];
 
-            gainXP(challenges[challengeData.currentIndex].xp);
-            burnKCAL(challenges[challengeData.currentIndex].kcal);
+            gainXP(current.xp);
+            burnKCAL(current.kcal);
+            soundComplete.play();
+
+            if (challengeData.currentIndex === 0) {
+                createRepeatCard(key, current);
+            } else {
+                updateRepeatCard(key, current);
+            }
 
             challengeData.currentIndex++;
-            soundComplete.play();
 
             if (challengeData.currentIndex >= challenges.length) {
                 el.innerHTML = `
@@ -76,27 +82,17 @@ function initChallenges() {
                 `;
                 el.style.opacity = "0.6";
                 el.style.pointerEvents = "none";
-                challengeData.currentIndex++;
                 saveCards();
                 return;
             }
 
             const next = challenges[challengeData.currentIndex];
-
             el.innerHTML = `
-            <h3>${next.title}</h3>
-            <p>${next.desc}</p>
-            <p>+${next.xp} XP</p>
-            <p>Unlocks: ${next.unlock}</p>
+                <h3>${next.title}</h3>
+                <p>${next.desc}</p>
+                <p>+${next.xp} XP</p>
+                <p>Unlocks: ${next.unlock}</p>
             `;
-
-            const current = challenges[challengeData.currentIndex - 1];
-
-            if (challengeData.currentIndex === 1) {
-                createRepeatCard(key, current);
-            } else if (challengeData.currentIndex > 1) {
-                updateRepeatCard(key, current);
-            }
 
             saveCards();
         });
