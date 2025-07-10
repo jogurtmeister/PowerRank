@@ -1,0 +1,1 @@
+var soundComplete=new Audio("audio/complete.mp3");var soundLevelUp=new Audio("audio/levelup.mp3");

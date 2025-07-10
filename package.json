@@ -1,0 +1,25 @@
+{
+  "name": "powerrank",
+  "version": "1.0.0",
+  "main": "minify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jogurtmeister/PowerRank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jogurtmeister/PowerRank/issues"
+  },
+  "homepage": "https://github.com/jogurtmeister/PowerRank#readme",
+  "description": "",
+  "dependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "rimraf": "^6.0.1",
+    "terser": "^5.43.1"
+  }
+}
