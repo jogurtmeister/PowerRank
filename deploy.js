@@ -1,6 +1,6 @@
 //node deploy.js
 const BRANCH_NAME = 'main';
-const COMMIT_MESSAGE_TEXT = "v0.8.0 - minify and deployment - first test";
+const COMMIT_MESSAGE_TEXT = "Updated site";
 
 const { execSync } = require("child_process");
 const path = require("path");
