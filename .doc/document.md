@@ -39,3 +39,5 @@ Logo
 
 Favicon
 ![Favicon](/img/favicon.ico)
+
+Diese Website bietet ein Fitnessprogramm an. Man kann sich aufleveln.

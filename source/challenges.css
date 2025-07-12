@@ -184,14 +184,15 @@
 
 .hover-img-preview {
     position: absolute;
-    display: none;
-    z-index: 1000;
     width: 150px;
+    max-height: 150px;
+    display: none;
     border: 2px solid #ccc;
     border-radius: 8px;
     background: white;
     padding: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 @media (max-width: 750px) {
